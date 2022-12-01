@@ -1,13 +1,10 @@
-package com.lucidiovacas.springboot.task02;
+package com.lucidiovacas.testing.testingtask;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
-public class Task02Application {
+public class TestingTaskApplication {
 
 //	@Autowired
 //	private StudentRepository studentRepo;
@@ -20,7 +17,7 @@ public class Task02Application {
 //	}
 
 	public static void main(String[] args) {
-		SpringApplication.run(Task02Application.class, args);
+		SpringApplication.run(TestingTaskApplication.class, args);
 	}
 
 }

@@ -1,10 +1,10 @@
-package com.lucidiovacas.springboot.task02;
+package com.lucidiovacas.testing.testingtask;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Task02ApplicationTests {
+class TestingTaskTests {
 
 	@Test
 	void contextLoads() {
