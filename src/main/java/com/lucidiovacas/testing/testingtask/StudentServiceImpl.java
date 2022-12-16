@@ -56,7 +56,7 @@ public class StudentServiceImpl implements StudentService{
 
     private Student checkStudentExistsById(Long id) throws DoesNotExistException {
         return studentRepository.findById(id).orElseThrow(() ->
-                new DoesNotExistException("Student", String.format("Student with id {} does not exist", id)));
+                new DoesNotExistException(String.format("Student with id %d does not exist", id)));
     }
 
     @Override

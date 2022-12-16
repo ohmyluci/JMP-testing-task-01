@@ -28,7 +28,7 @@ class StudentControllerIntegrationTest {
     private TestRestTemplate client;
 
     @LocalServerPort
-    private int puerto;
+    private int port;
 
     private ObjectMapper mapper;
 
@@ -56,7 +56,7 @@ class StudentControllerIntegrationTest {
         assertEquals("email1", jsonNode.path("email").asText());
 
         assertEquals(HttpStatus.CREATED, response.getStatusCode());
-        assertEquals(json, "{\"id\":1,\"name\":\"name1\",\"email\":\"email1\",\"age\":21}");
+        assertEquals("{\"id\":1,\"name\":\"name1\",\"email\":\"email1\",\"age\":21}", json);
 
         response = client
                 .postForEntity(createUri("/api/v1/students"), student2, String.class);
@@ -65,7 +65,7 @@ class StudentControllerIntegrationTest {
 
         assertEquals(HttpStatus.CREATED, response.getStatusCode());
         assertEquals(MediaType.APPLICATION_JSON, response.getHeaders().getContentType());
-        assertEquals(json, "{\"id\":2,\"name\":\"name2\",\"email\":\"email2\",\"age\":23}");
+        assertEquals("{\"id\":2,\"name\":\"name2\",\"email\":\"email2\",\"age\":23}", json);
 
     }
 
@@ -84,6 +84,6 @@ class StudentControllerIntegrationTest {
     }
 
     private String createUri(String uri) {
-        return "http://localhost:" + puerto + uri;
+        return "http://localhost:" + port + uri;
     }
 }
