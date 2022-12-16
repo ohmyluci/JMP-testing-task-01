@@ -1,15 +1,12 @@
 package com.lucidiovacas.testing.testingtask;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
+import lombok.*;
 import javax.persistence.*;
 
 @Entity
-@Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Data
 @Table(name = "students")
 public class Student {
 
